@@ -14,7 +14,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params) #auxillary method instead of params[:user]
-    if @user.save                 #allows us the use of strong parameters
+    if @user.save
+      redirect_to @user                  #allows us the use of strong parameters
     else
       render 'new'
     end
