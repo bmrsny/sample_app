@@ -11,6 +11,7 @@ gem 'autoprefixer-rails'
 gem 'bcrypt'
 
 gem 'pry'
+
 # Use sqlite3 as the database for Active Record
 gem 'sass-rails',           '5.0.0.beta1'
 gem 'uglifier',             '2.5.3'
@@ -36,4 +37,5 @@ end
 group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
+  gem 'unicorn',        '4.8.3'
 end
