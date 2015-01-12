@@ -4,6 +4,8 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
+      log_in user
+      redirect_to user
       #log into user and redirect to users home page
     else
       #Create an error message
